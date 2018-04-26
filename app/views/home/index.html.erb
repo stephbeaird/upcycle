@@ -5,11 +5,11 @@
     });
   </script>
 <% end %>
-<h2>Products</h2>
+<h2>Orders</h2>
 
 <ul>
-  <% @products.each do |product| %>
-    <li><%= product.title %></li>
+  <% @orders.each do |order| %>
+    <li><%= order.number %></li>
   <% end %>
 </ul>
 
