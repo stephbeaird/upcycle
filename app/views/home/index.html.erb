@@ -12,13 +12,14 @@
       <th scope="col">Order Number</th>
       <th scope="col">Name</th>
     </tr>
+
+  <tbody>
+      <tr>
+        <% @orders.each do |order| %>
+          <td><li><%= order.customer.first_name %> <%= order.customer.last_name %></li></td>
+          <td><li><%= order.number %></li></td>
+        <% end %>
+      </tr>
+  </tbody>
 </table>
-<tbody>
-    <tr>
-      <% @orders.each do |order| %>
-        <td><li><%= order.customer.first_name %> <%= order.customer.last_name %></li></td>
-        <td><li><%= order.number %></li></td>
-      <% end %>
-    </tr>
-</tbody>
 <hr>
