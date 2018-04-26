@@ -6,8 +6,7 @@
   </script>
 <% end %>
 <h2>Orders</h2> 
-    <p>Search icon on a styled button:
-    <button type="button" class="btn btn-info">
+    <p><button type="button" class="btn btn-info">
       <span class="glyphicon glyphicon-search"></span> Search
     </button>
     <table class="table table-bordered table-striped" id="order_table">
@@ -21,7 +20,7 @@
           <th><button>Notify Customer</button></th>
         </tr>
       </thead>
-      
+
       <tbody>   
         <% @orders.each do |order| %>
           <tr>
