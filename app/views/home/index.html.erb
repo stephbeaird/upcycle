@@ -22,16 +22,16 @@
         </tr>
       </thead>
 
-      <%= form_tag(orders_path, :method => "get", id: "search-form") do %>
-        <%= text_field_tag :search, params[:search], placeholder: "Search Posts" %>
-        <%= submit_tag "Search" %>
-      <% end %>  
+      # <%= form_tag(orders_path, :method => "get", id: "search-form") do %>
+      #   <%= text_field_tag :search, params[:search], placeholder: "Search Posts" %>
+      #   <%= submit_tag "Search" %>
+      # <% end %>  
       
-      <% if @orders.present? %>
-        <%= render @order.number %>
-      <% else %>
-        <p>There are no orders <%= params[:search] %></p>
-      <% end %>
+      # <% if @orders.present? %>
+      #   <%= render @order.number %>
+      # <% else %>
+      #   <p>There are no orders <%= params[:search] %></p>
+      # <% end %>
 
       <tbody>   
         <% @orders.each do |order| %>
