@@ -1,5 +1,8 @@
 class HomeController < ShopifyApp::AuthenticatedController
   def index
-    @orders = ShopifyAPI::Order.find(:all, params: { limit: 25 })
+    if params[:search]
+      @orders = ShopifyAPI::Order.find(:all, :conditions => ['number LIKE ?', "%#{params[:search]}%"])
+    else
+      @orders = ShopifyAPI::Order.find(:all)
   end
 end
