@@ -8,22 +8,22 @@
 <h2>Orders</h2>
 
 <table class="table">
-  <thead>
+  <thead class="thead-dark">
     <tr>
       <th scope="col">#</th>
       <th scope="col">Name</th>
       <th scope="col">Order Number</th>
     </tr>
   </thead>
-  <tbody>
+</table>
+<tbody>
     <ul>
       <% @orders.each do |order| %>
         <li><%= order.customer.first_name %> <%= order.customer.last_name %></li>
         <li><%= order.number %></li>
       <% end %>
     </ul>
-  </tbody>
-</table>
+</tbody>
 
 
 
