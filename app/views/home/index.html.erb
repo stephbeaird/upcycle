@@ -6,21 +6,9 @@
   </script>
 <% end %>
 <h2>Orders</h2>
-    <% form_tag orders_path do %>
-      <p>
-        <%= text_field_tag :search, params[:search] %>
-        <%= submit_tag "Search" %>
-      </p>
-    <% end %>
-
-
-    <form action="/orders" method="get">
-      <p>
-        <input id="search" name="search" type="text"/>
-        <input name="commit" type="submit" value="Search"/>
-      </p>
-    </form>
-
+    <p><button type="button" class="btn btn-info">
+      <span class="glyphicon glyphicon-search" style="color:pink"></span> Search
+    </button>
     <table class="table table-bordered table-striped" id="order_table">
       <thead>
         <tr>
