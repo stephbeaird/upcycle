@@ -7,10 +7,24 @@
 <% end %>
 <h2>Orders</h2>
 
-<ul>
-  <% @orders.each do |order| %>
-    <li><%= order.number %></li>
-  <% end %>
-</ul>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Name</th>
+      <th scope="col">Order Number</th>
+    </tr>
+  </thead>
+  <tbody>
+    <ul>
+      <% @orders.each do |order| %>
+        <li><%= order.customer.first_name %> <%= order.customer.last_name %></li>
+        <li><%= order.number %></li>
+      <% end %>
+    </ul>
+  </tbody>
+</table>
+
+
 
 <hr>
