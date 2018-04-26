@@ -5,21 +5,22 @@
     });
   </script>
 <% end %>
-<h2>Orders</h2>
+    <h2>Orders</h2>
+      <table class="table table-bordered table-striped" id="order_table">
+      <thead>
+        <tr>
+          <th scope="col">Order Number</th>
+          <th scope="col">Name</th>
+        </tr>
+      </thead>
 
-<table class="table table-bordered table-striped" id="order_table">
-    <tr>
-      <th scope="col">Order Number</th>
-      <th scope="col">Name</th>
-    </tr>
-
-  <tbody>
-      <tr>
+      <tbody>   
         <% @orders.each do |order| %>
-          <td><%= order.customer.first_name %> <%= order.customer.last_name %></td>
-          <td><%= order.number %></td>
+          <tr>
+              <td><%= order.customer.first_name %> <%= order.customer.last_name %></td>
+              <td><%= order.number %></td>
+          </tr>
         <% end %>
-      </tr>
-  </tbody>
-</table>
+      </tbody>
+    </table>
 <hr>
