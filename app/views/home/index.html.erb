@@ -9,7 +9,7 @@
 
 <ul>
   <% @orders.each do |order| %>
-    <li><%= link_to order.number, "https://#{@shop_session.url}/admin/products/#{order.id}", target: "_top" %></li>
+    <li><%= order.number %></li>
   <% end %>
 </ul>
 
