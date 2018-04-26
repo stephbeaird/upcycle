@@ -9,16 +9,15 @@
 
 <table class="table table-bordered table-striped" id="order_table">
     <tr>
-      <th scope="col">#</th>
-      <th scope="col">Name</th>
       <th scope="col">Order Number</th>
+      <th scope="col">Name</th>
     </tr>
 </table>
 <tbody>
     <ul>
       <% @orders.each do |order| %>
-        <li><%= order.customer.first_name %> <%= order.customer.last_name %></li>
-        <li><%= order.number %></li>
+        <th><li><%= order.customer.first_name %> <%= order.customer.last_name %></li></th>
+        <th><li><%= order.number %></li></th>
       <% end %>
     </ul>
 </tbody>
