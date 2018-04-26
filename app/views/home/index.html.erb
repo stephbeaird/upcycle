@@ -16,8 +16,8 @@
   <tbody>
       <tr>
         <% @orders.each do |order| %>
-          <td><li><%= order.customer.first_name %> <%= order.customer.last_name %></li></td>
-          <td><li><%= order.number %></li></td>
+          <td><%= order.customer.first_name %> <%= order.customer.last_name %></td>
+          <td><%= order.number %></td>
         <% end %>
       </tr>
   </tbody>
