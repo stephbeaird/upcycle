@@ -35,12 +35,12 @@
               <td></td>
           </tr>
         <% end %>
-
-          <% @pricerules.each do |pr| %>
-            <tr>
-              <td><%= pr.title %></td>
-            </tr>
-          <% end %>
       </tbody>
     </table>
 <hr>
+
+<% @pricerules.each do |pr| %>
+  <tr>
+    <td><%= pr.title %></td>
+  </tr>
+<% end %>
