@@ -35,6 +35,12 @@
               <td></td>
           </tr>
         <% end %>
+
+          <% @price_rule.each do |pr| %>
+            <tr>
+              <td><%= pr.title %></td>
+            </tr>
+          <% end %>
       </tbody>
     </table>
 <hr>
