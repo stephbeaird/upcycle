@@ -10,6 +10,12 @@
       <form>
         <input type="text" placeholder="Search" name="search">
       </form>
+
+      <%= form_tag(orders_path) do %>
+        <%= text_field_tag :store %>
+        <%= submit_tag 'Search' %>
+      <% end %>
+
     </div>
     <table class="table table-bordered table-striped" id="order_table">
       <thead>
