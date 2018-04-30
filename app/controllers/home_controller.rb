@@ -3,7 +3,8 @@ class HomeController < ShopifyApp::AuthenticatedController
     @orders = ShopifyAPI::Order.find(:all, params: { limit: 25 })
   end
 
+  #GET /button
   def button
-    puts "code goes here"
+    format.js { render js: "alert('simple output');"}
   end
 end

@@ -21,7 +21,7 @@
           <th><button>Generate Code</button></th>
           <th>Upcycle Code</th>
           <th><button>Notify Customer</button></th>
-          <%= button_to 'Generate Code', button_path, method: post %>
+          <%= link_to 'Generate Code', button_path, remote: true %>
         </tr>
       </thead>
 
