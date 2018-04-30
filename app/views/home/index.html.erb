@@ -24,6 +24,8 @@
         </tr>
       </thead>
 
+      <%= button_to 'Generate Code', button_path, method: post %>
+
       <tbody>
         <% @orders.each do |order| %>
           <tr>
