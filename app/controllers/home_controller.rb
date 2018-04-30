@@ -1,10 +1,9 @@
 class HomeController < ShopifyApp::AuthenticatedController
   def index
     @orders = ShopifyAPI::Order.find(:all, params: { limit: 25 })
-  end
-
-  #GET /button
-  def button
-    format.js { render js: "alert('simple output');"}
+    if params[:search]
+      @orders = Order.search(params[:search]).order("created_at DESC")
+    else
+      @orders = Order.all.order("created_at DESC")
   end
 end
