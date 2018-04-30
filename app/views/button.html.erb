@@ -1,0 +1,41 @@
+<% content_for :javascript do %>
+    <script type="text/javascript">
+      ShopifyApp.ready(function(){
+        ShopifyApp.Bar.initialize({ title: "Home" });
+      });
+    </script>
+  <% end %>
+  <h2>Orders</h2>
+      <div class="search-container">
+        <form>
+          <input type="text" placeholder="Search" name="search">
+        </form>
+      </div>
+      
+      <table class="table table-bordered table-striped" id="order_table">
+        <thead>
+          <tr>
+            <th>Order Number</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th><button>Generate Code</button></th>
+            <th>Upcycle Code</th>
+            <th><button>Notify Customer</button></th>
+          </tr>
+        </thead>
+  
+        <tbody>
+          <% @orders.each do |order| %>
+            <tr>
+                <td><%= order.number %></td>
+                <td><%= order.customer.first_name %> <%= order.customer.last_name %></td>
+                <td><%= order.customer.email %></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+  <hr>
+  
