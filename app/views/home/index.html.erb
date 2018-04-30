@@ -18,10 +18,10 @@
           <th>Order Number</th>
           <th>Name</th>
           <th>Email</th>
-          <th><button>Generate Code</button></th>
+          <th><button><%= link_to 'Generate Code', button_path, remote: true %></button></th>
           <th>Upcycle Code</th>
           <th><button>Notify Customer</button></th>
-          <%= link_to 'Generate Code', button_path, remote: true %>
+          # <%= link_to 'Generate Code', button_path, remote: true %>
         </tr>
       </thead>
 
