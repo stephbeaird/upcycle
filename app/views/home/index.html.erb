@@ -21,6 +21,12 @@
           <th><button type="button" onclick="generateCode()">Generate Code</button></th>
           <th>Upcycle Code</th>
           <th><button>Notify Customer</button></th>
+          <% form_tag projects_path, :method => 'get' do %>
+            <p>
+              <%= text_field_tag :search, params[:search] %>
+              <%= submit_tag "Search", :theme => nil %>
+            </p>
+          <% end %>
         </tr>
       </thead>
 
