@@ -9,12 +9,16 @@
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">  
     </head>
 
+    
+
+  <body>
+  
     <%= form_tag(orders_path, :method => "post", id: "search-form") do %>
       <%= text_field_tag :search, params[:search], placeholder: "Search Orders" %>
       <%= submit_tag "Search", :name => nil %>
     <% end %> 
-    
-  <body>
+
     <%= yield %>
+    
   </body>
 </html>
