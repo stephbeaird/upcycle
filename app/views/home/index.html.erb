@@ -7,18 +7,14 @@
 <% end %>
 <body>
   <h2>Orders</h2>
-  
+
     <%= form_tag("/search", method: "get") do %>
       <%= label_tag(:q, "Search for:") %>
       <%= text_field_tag(:q) %>
       <%= submit_tag("Search") %>
     <% end %>
 
-      <div class="search-container">
-        <form>
-          <input type="text" placeholder="Search" name="search"> <button style="border-radius: 3px">Go</button>
-        </form>
-      </div>
+      <div class="search-container"></div>
       <table class="table table-bordered table-striped" id="order_table">
         <thead>
           <tr>
