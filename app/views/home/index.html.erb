@@ -5,6 +5,11 @@
     });
   </script>
 <% end %>
+
+<% if @orders.blank? %>
+  <h3>There are no orders containing the numbe<%= params[:search] %></h3>
+<% end %>
+
 <h2>Orders</h2>
     <div class="search-container">
       <form>
