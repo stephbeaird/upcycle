@@ -1,5 +1,9 @@
 {
   "name": "upcycleapp",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "datatables.net-autofill-bs": "^2.0.0",
+    "datatables.net-bs": "^1.10.16",
+    "datatables.net-fixedheader-bs": "^3.1.3"
+  }
 }
