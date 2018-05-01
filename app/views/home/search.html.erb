@@ -5,8 +5,20 @@
       });
     </script>
   <% end %>
-<h1>Hello World</h1>
+  
+<h1>Search</h1>
 
-    <% @orders.each do |order| %>
-        <%= order.number %>
-    <% end %>
+    <div class="search-container"></div>
+        <table class="table table-bordered table-striped" id="order_table">
+            <thead>
+                <tr>
+                <th>Order Number</th>
+            </thead>
+        
+            <tbody>
+                <% @orders.each do |order| %>
+                    <%= order.number %>
+                <% end %>
+            </tbody>
+        </table>
+    </div>
