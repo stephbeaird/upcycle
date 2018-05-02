@@ -14,32 +14,31 @@
       <%= submit_tag("Search") %>
     <% end %>
 
-      <div class="search-container"></div>
-      <table class="table table-bordered table-striped" id="order_table">
-        <thead>
+    <div class="search-container"></div>
+    <table class="table table-bordered table-striped" id="order_table">
+      <thead>
+        <tr>
+          <th>Order Number</th>
+          <th>Name</th>
+          <th>Email</th>
+          <th><button type="button" onclick="generateCode()">Generate Code</button></th>
+          <th>Upcycle Code</th>
+          <th><button>Notify Customer</button></th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <% @orders.each do |order| %>
           <tr>
-            <th>Order Number</th>
-            <th>Name</th>
-            <th>Email</th>
-            <th><button type="button" onclick="generateCode()">Generate Code</button></th>
-            <th>Upcycle Code</th>
-            <th><button>Notify Customer</button></th>
+            <td><%= order.number %></td>
+            <td><%= order.customer.first_name %> <%= order.customer.last_name %></td>
+            <td><%= order.customer.email %></td>
+            <td></td>
+            <td></td>
+            <td></td>
           </tr>
-        </thead>
-
-
-        <tbody>
-          <% @orders.each do |order| %>
-            <tr>
-                <td><%= order.number %></td>
-                <td><%= order.customer.first_name %> <%= order.customer.last_name %></td>
-                <td><%= order.customer.email %></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-          <% end %>
-        </tbody>
-      </table>
+        <% end %>
+      </tbody>
+    </table>
   <hr>
 </body>
