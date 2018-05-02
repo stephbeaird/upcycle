@@ -34,6 +34,8 @@ gem 'hirb'
 
 # gem 'ransack'
 
+gem 'filterrific'
+
 gem 'rails-simple-search'
 
 group :development, :test do
