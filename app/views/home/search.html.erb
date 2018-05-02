@@ -17,7 +17,7 @@
             </thead>
 
             <tbody>
-                <% @orders.freeze do |order| %>
+                <% @orders.each do |order| %>
                     <tr>
                         <td><%= order.number %></td>
                     </tr>
