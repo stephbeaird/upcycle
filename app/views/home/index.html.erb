@@ -8,7 +8,7 @@
 <body>
   <h2>Orders</h2>
 
-    <%= form_tag(search_path) do %>
+    <%= form_tag(search_path method: :get) do %>
       Search <%= text_field_tag :search %>
       <%= submit_tag 'Search' %>
     <% end %>
