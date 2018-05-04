@@ -1,8 +1,8 @@
 class Order < ApplicationRecord
-  def self.search(search)
+  def order.search(search)
     if search
-      find(:all, :conditions => ['number LIKE ?', "%#{search}%"])
+      where('number LIKE ?', "%#{search}%")
     else
-      find(:all)
+      all
   end
 end
