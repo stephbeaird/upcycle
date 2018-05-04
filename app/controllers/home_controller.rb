@@ -4,7 +4,6 @@ class HomeController < ShopifyApp::AuthenticatedController
   end
 
   def search
-    orders = params[:number][:search]
     @orders = ShopifyAPI::Order.where('number LIKE ?', "%#{params[:search]%")
   end
 end
