@@ -1,0 +1,28 @@
+<% content_for :javascript do %>
+    <script type="text/javascript">
+    ShopifyApp.ready(function(){
+        ShopifyApp.Bar.initialize({ title: "Home" });
+    });
+    </script>
+<% end %>
+
+<h1>Search</h1>
+<body>
+    <div class="search-container"></div>
+        <table class="table table-bordered table-striped" id="order_table">
+            <thead>
+                <tr>
+                    <th>Order Number</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <% @orders.each do |order| %>
+                    <tr>
+                        <td><%= order.number %></td>
+                    </tr>
+                <% end %>
+            </tbody>
+        </table>
+    </div>
+</body>
