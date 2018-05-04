@@ -3,5 +3,6 @@ Rails.application.routes.draw do
   mount ShopifyApp::Engine, at: '/'
 
   post '/search' => 'home#search'
+  post '/price' => 'home#price'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

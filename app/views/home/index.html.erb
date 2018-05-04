@@ -24,6 +24,11 @@
           <th><button type="button" onclick="generateCode()">Generate Code</button></th>
           <th>Upcycle Code</th>
           <th><button>Notify Customer</button></th>
+
+          <%= button_tag("/price", method: "post") do %>
+            <%= button_tag("Generate Code") %>
+          <% end %>
+
         </tr>
       </thead>
 
