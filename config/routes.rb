@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'orders/index'
+
   root :to => 'home#index'
   mount ShopifyApp::Engine, at: '/'
 
