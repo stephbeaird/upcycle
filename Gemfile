@@ -1,11 +1,12 @@
 source 'https://rubygems.org'
 
-git_source(:github) do |repo_name|
-  repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
+git_source(:github) do |upcycle|
+  upcycle = "#upcycle/#upcycle" unless upcycle.include?("/")
   "https://github.com/upcycle.git"
 end
 
 gem 'shopify_app'
+gem 'will_paginate-3.1.6'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.6'
 # Use Puma as the app server
@@ -31,8 +32,6 @@ gem 'jbuilder', '~> 2.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 gem 'hirb'
-
-gem 'will_paginate', '~> 3.1', '>= 3.1.6'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
