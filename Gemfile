@@ -6,7 +6,6 @@ git_source(:github) do |upcycle|
 end
 
 gem 'shopify_app'
-gem 'will_paginate-3.1.6'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.6'
 # Use Puma as the app server
