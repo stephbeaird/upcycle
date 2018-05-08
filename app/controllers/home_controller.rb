@@ -9,7 +9,7 @@ class HomeController < ShopifyApp::AuthenticatedController
     offset = ((page.to_i -1) * limit.to_i) || 0
     term = params[:term] || nil
     orders = [:number, :first_name, :last_name]
-    @orders = ShopifyAPI::Order.where(type: "number", "first name", "last name")
+    @orders = ShopifyAPI::Order.where(type: "number")
     render json: orders
   end
 end
