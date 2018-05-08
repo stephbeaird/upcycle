@@ -6,9 +6,4 @@ class HomeController < ShopifyApp::AuthenticatedController
   def search
     @orders = ShopifyAPI::Order.where(:all, params[:number])
   end
-
-  private
-  def order_params
-    params.require(:order).permit(:number)
-  end
 end
