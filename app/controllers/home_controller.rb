@@ -6,6 +6,6 @@ class HomeController < ShopifyApp::AuthenticatedController
   def search
     term = params[:term] || nil
     @orders = ShopifyAPI::Order.where(type: "number")
-    render json: order.number
+    render json: orders
   end
 end
