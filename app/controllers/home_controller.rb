@@ -5,7 +5,7 @@ class HomeController < ShopifyApp::AuthenticatedController
 
   def search
     term = params[:term] || nil
-    orders = params[:number, :first_name, :last_name]
+    orders = [:number, :first_name, :last_name]
     @orders = ShopifyAPI::Order.where(type: "number")
     render json: orders
   end
