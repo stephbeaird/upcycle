@@ -1,6 +1,6 @@
 class HomeController < ShopifyApp::AuthenticatedController
   def index
-    @orders = ShopifyAPI::Order.find(:all)
+    @orders = ShopifyAPI::Order.all
   end
 
   def search
