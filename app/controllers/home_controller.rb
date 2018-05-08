@@ -4,7 +4,7 @@ class HomeController < ShopifyApp::AuthenticatedController
   end
 
   def search
-    @orders = ShopifyAPI::Order.search(params[:search], params[:number])
+    @orders = ShopifyAPI::Order.where(:all, params[:number])
   end
 
   private
