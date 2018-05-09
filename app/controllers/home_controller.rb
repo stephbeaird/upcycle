@@ -4,7 +4,7 @@ class HomeController < ShopifyApp::AuthenticatedController
   end
 
   def search
-    @orders = ShopifyAPI::Order.search
+    @orders = ShopifyAPI::Session.temp("bellybandit.myshopify.com", token)
   end
 end
  
