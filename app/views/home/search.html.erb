@@ -19,7 +19,7 @@
             <tbody>
                 <% @orders.each do |order| %>
                     <tr>
-                        <td><%= order.number %></td>
+                        <td><%= order.customer.last_order_name %></td>
                     </tr>
                 <% end %>
             </tbody>
