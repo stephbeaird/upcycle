@@ -14,16 +14,6 @@
       <%= submit_tag("Search") %>
     <% end %>
 
-    <div class="header-bar__module header-bar__search">
-      <form action="/search" method="get" class="header-bar__search-form clearfix" role="search">
-        <button type="submit" class="btn icon-fallback-text header-bar__search-submit">
-          <span class="icon icon-search" aria-hidden="true">::before</span>
-          <span class="fallback-text">Search</span>
-        </button>
-        <input type="search" name="q" value aria-label="Search" class="header-bar__search-input" placeholder="Search" autocomplete="on">::after
-      </form>
-    </div>
-    
     <div class="search-container"></div>
     <table class="table table-bordered table-striped" id="order_table">
       <thead>
