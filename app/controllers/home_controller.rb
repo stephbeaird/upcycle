@@ -4,7 +4,7 @@ class HomeController < ShopifyApp::AuthenticatedController
   end
 
   def search
-    @orders = ShopifyAPI::Session.temp("bellybandit.myshopify.com", token)
+    @orders = ShopifyAPI::Order.where(type: "number" )
   end
 end
  
